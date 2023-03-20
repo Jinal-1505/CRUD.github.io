@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>
+            <h2>Form</h2>
+        </legend>
+        <input type="text" id="searchBar" placeholder="Search...">
+
+        <br>
+        <br>
+        <br>
+        <form id="form">
+            <input type="text" id="category" name="category" placeholder="Category"><br>
+            <input type="text" id="product" name="product" placeholder="Product"><br>
+            <input type="text" id="price" name="price" placeholder="Price"><br>
+            <input type="button" value="Submit" id="btn" onclick="Submit()">
+            <input type="reset" value="reset">
+            <button id="clearStorageBtn">Clear Local Storage</button>
+            <input type="button" onclick="generateCategoryTable()" value="Category wise total">
+        </form>
+    </fieldset>
+    <br>
+    <div id="msg"></div>
+    <br>
+
+    <fieldset>
+        <legend>
+            <h2>Data</h2>
+        </legend>
+        <table id="table" border="2">
+            <tr>
+                <td class=".col"><input type="button" onclick="sortCategory()" value="Category"></td>
+                <td class=".col"><input type="button" onclick="sortProduct()" value="Product"></td>
+                <td class=".col"><input type="button" onclick="sortPrice()" value="Price"></td>
+
+                <td class=".col">ID</td>
+                <td class=".col">Action</td>
+            </tr>
+        </table>
+
+    </fieldset>
+    <fieldset>
+        <legend>
+            <h2>Product Total Category wise</h2>
+        </legend>
+        <table id="categoryTable" border="2">
+            <tbody>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Total Products</th>
+                    </tr>
+                </thead>
+
+            </tbody>
+        </table>
+    </fieldset>
+    <script src="script.js"></script>
+</body>
+
+</html>
